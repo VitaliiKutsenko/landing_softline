@@ -1,0 +1,129 @@
+@import "src/style/mixins";
+
+.benefits {
+  @include small() {
+    margin: 0 5px 50px 5px;
+    padding: 24px 0 24px 0;
+  }
+  position: relative;
+  margin: 0 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+  & .compensation {
+    @include small() {
+      margin: 0;
+    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 85px 110px;
+    & .compensation_title {
+      @include small() {
+        font-weight: 600;
+        font-size: 24px;
+        padding: 5px;
+        line-height: 100%;
+        white-space: nowrap;
+        margin-bottom: 40px;
+      }
+      font-style: normal;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 100%;
+      text-align: center;
+      color: #444444;
+      margin-bottom: 50px;
+    }
+    & .compensation_list {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 17px;
+
+      & .compensation_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include small() {
+          width: 110px;
+        }
+        & .compensation_item__img {
+          padding: 0 34px 10px 34px;
+          @include small() {
+            width: 80px;
+            height: 80px;
+            padding: 0;
+          }
+        }
+        & .compensation_item__text {
+          display: block;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 110%;
+          text-align: center;
+          color: #444444;
+          text-wrap: normal;
+          white-space: nowrap;
+          @include small() {
+            font-size: 16px;
+            line-height: 110%;
+            width: 100%;
+            white-space: initial;
+          }
+        }
+      }
+    }
+  }
+  & .separator {
+    width: calc(100% - 60px);
+    margin-bottom: -30px;
+    @include small() {
+      width: 100%;
+      margin: 24px 0;
+      transform: translateY(0);
+    }
+    position: relative;
+    transform: translateY(-13px);
+    opacity: 0.1;
+    border: 1px solid #000000;
+  }
+  & .motivation_wrapper {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .motivation_wrapper__title {
+      @include small() {
+        font-size: 21px;
+        padding: 5px;
+      }
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 120%;
+      text-align: center;
+      color: #444444;
+    }
+    & .motivation_wrapper__info {
+      @include small() {
+        font-size: 22px;
+      }
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 120%;
+      text-align: center;
+      color: #b01736;
+    }
+  }
+}

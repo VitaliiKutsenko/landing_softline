@@ -1,0 +1,50 @@
+@import "./src/style/mixins";
+
+.employeeInfo {
+  @include small() {
+    column-gap: 8px;
+    row-gap: 24px;
+    margin-bottom: 52px;
+  }
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  column-gap: 190px;
+  & .employeeInfoList {
+    white-space: nowrap;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include small() {
+      align-items: center;
+      justify-content: center;
+    }
+    & h2 {
+      @include small() {
+        font-size: 35px;
+        letter-spacing: normal;
+        opacity: 0.95;
+      }
+      font-style: normal;
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 80%;
+      color: #a30c33;
+    }
+    span {
+      @include small() {
+        font-size: 16px;
+        text-align: center;
+      }
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      color: #444444;
+    }
+  }
+}

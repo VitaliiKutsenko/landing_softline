@@ -1,0 +1,10 @@
+@import "./src/style/mixins";
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  @include small() {
+    row-gap: 0px;
+  }
+}

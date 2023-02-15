@@ -1,0 +1,75 @@
+@import "./src/style/mixins";
+
+.banner {
+  width: 100%;
+  margin-bottom: 60px;
+  @include small() {
+    max-height: 300px;
+    align-items: center;
+    justify-content: center;
+  }
+  position: relative;
+  display: flex;
+  .contentWrapper {
+    margin: 158px 0;
+    align-content: center;
+    position: absolute;
+    left: 74px;
+    max-width: 709px;
+    display: flex;
+    flex-wrap: wrap;
+    @include small() {
+      margin: 40px 5px 5px 0;
+      left: 0;
+      top: 0;
+      padding: 0 5px;
+    }
+    & section {
+      @include small() {
+        font-weight: 600;
+        font-size: 28px;
+      }
+      font-style: normal;
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 100%;
+      color: #444444;
+    }
+    .banner_button {
+      @include small() {
+        height: 32px;
+        padding: 6.5px 25.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      margin-top: 60px;
+      background: #b01736;
+      border-radius: 8px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 18px 28px;
+      gap: 10px;
+      width: 110px;
+      height: 56px;
+      text-decoration: none;
+      transition: 0.3s linear;
+
+      &:hover {
+        transition: 0.3s linear;
+        background: #d43152;
+      }
+    }
+  }
+  & img {
+    @include small() {
+      object-fit: fill;
+      width: 300%;
+      max-height: 300px;
+    }
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+@import "./vars";
+
+@mixin desktop() {
+  @media (max-width: $breakpoint_xxl) {
+    @content;
+  }
+}
+@mixin small() {
+  @media (max-width: $breakpoint_sm) {
+    @content;
+  }
+} ;

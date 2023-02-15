@@ -1,0 +1,33 @@
+@import "../../../../style/vars";
+@import "./src/style/mixins";
+
+.aboutUs {
+  background: $mainColor;
+  margin: 0 70px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.08);
+  @include small() {
+    padding: 24px 5px;
+    margin: 0 0 50px 0;
+  }
+  .aboutUs_info {
+    @include small() {
+      font-size: 16px;
+      padding: 0;
+      font-weight: 600;
+      line-height: 120%;
+      white-space: normal;
+    }
+    padding: 99px 110px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    text-wrap: normal;
+    text-align: center;
+    color: #444444;
+
+    & span {
+      color: #b01736;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "src/style/vars";
+@import "./src/style/mixins";
+.list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 5px;
+  @include small() {
+    height: 100%;
+    margin: 16px 0 0 0;
+  }
+  & li {
+    @include small() {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0;
+    }
+    margin-left: 20px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #444444;
+  }
+}

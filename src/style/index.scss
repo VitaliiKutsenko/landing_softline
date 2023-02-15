@@ -1,0 +1,36 @@
+@import "mixins";
+@import "normalize.css";
+@import "vars";
+@font-face {
+  font-family: "ProximaNovaReg";
+  src: url("../../public/fonts/ProximaNovaCondensedRegular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ProximaNovaLight";
+  src: url("../../public/fonts/ProximaNovaCondensedLight.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ProximaNovaThin";
+  src: url("../../public/fonts/ProximaNovaCondensedThin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "ProximaNovaReg";
+  letter-spacing: 0.3px;
+}
+#root {
+  background: $mainColor;
+  height: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  overflow: hidden;
+  flex-wrap: wrap;
+}

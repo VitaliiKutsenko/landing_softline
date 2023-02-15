@@ -1,0 +1,97 @@
+@import "swiper/css/bundle";
+@import "src/style/mixins";
+.photoGallery {
+  & .photoGallery_nav {
+    margin-bottom: 50px;
+    @include small() {
+      margin-bottom: 15px;
+    }
+    & .photoGallery_nav__title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 100%;
+      color: #444444;
+      @include small() {
+        font-size: 28px;
+      }
+    }
+  }
+  & .slider {
+    margin: 0 70px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    @include small() {
+      margin: 0 5px;
+      padding-bottom: 50px;
+    }
+    & .slider_list {
+      display: flex;
+      & .slider_list__item {
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          overflow: hidden;
+        }
+      }
+    }
+    & .slider-button__prev {
+      top: 25px;
+      left: calc(100% - (56px * 2) - 20px);
+      width: 56px;
+      height: 56px;
+      background: #f0f0f0;
+      border-radius: 64.2857px;
+      @include small() {
+        visibility: hidden;
+      }
+      &:after {
+        color: #a30c33;
+        font-size: 25px;
+        font-weight: bolder;
+      }
+    }
+    & .slider-button__next {
+      top: 25px;
+      width: 56px;
+      height: 56px;
+      right: 0;
+      background: #f0f0f0;
+      border-radius: 64.2857px;
+
+      @include small() {
+        visibility: hidden;
+      }
+      &:after {
+        color: #a30c33;
+        font-size: 25px;
+        font-weight: bolder;
+      }
+    }
+    & .slider_pagination {
+      transform: translateY(-56px);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 10px;
+      @include small() {
+        visibility: hidden;
+      }
+      & .swiper-pagination-bullet {
+        width: 100%;
+        border-radius: 0;
+        background: #000000;
+        opacity: 0.1;
+        transition: 0.5s linear;
+
+        &.swiper-pagination-bullet-active {
+          transition: 0.3s linear;
+          background: #a30c33;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

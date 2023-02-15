@@ -1,0 +1,101 @@
+@import "./src/style/mixins";
+
+.selectWrapper {
+  @include small() {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 18px 0 0 5px;
+    overflow: hidden;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 70px;
+  background: #ffffff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+  height: 80px;
+  overflow: hidden;
+  & .select_button {
+    @include small() {
+      margin-bottom: 20px;
+    }
+    z-index: 1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    background: none;
+    border: none;
+    color: #444444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    & img {
+      transition: 0.3s linear;
+      position: relative;
+      margin-left: 12px;
+      transform: rotateX(-180deg);
+    }
+    &.active img {
+      transition: 0.3s linear;
+      transform: rotateX(0deg) translateX(25px);
+    }
+  }
+  & .select_list {
+    @include small() {
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+    }
+    display: flex;
+    list-style: none;
+    .select_list__item {
+      @include small() {
+        margin: 0 16px 20px 0;
+        font-size: 14px;
+        line-height: 16px;
+        white-space: nowrap;
+      }
+      position: relative;
+      cursor: pointer;
+      margin-left: 30px;
+      display: flex;
+      transition: 0.3s linear;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      color: #444444;
+      &.open {
+        transition: 0.3s linear;
+        color: #a30c33;
+      }
+      &:after {
+        @include small() {
+          border: 1px solid #a30c33;
+        }
+        position: absolute;
+        content: "";
+        width: 100%;
+        border: 3px solid #a30c33;
+        background: red;
+        bottom: 0;
+        visibility: hidden;
+        transition: 0.3s linear;
+        opacity: 0;
+      }
+      &.open:after {
+        visibility: visible;
+        transition: 0.3s linear;
+        opacity: 1;
+        @include small() {
+          transform: translateY(18.08px);
+        }
+        transform: translateY(28.08px);
+      }
+    }
+  }
+}
